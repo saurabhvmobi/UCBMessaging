@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>MessagePushExtension.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>UCBMessage.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>8618FC421E4B4694009E59C9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>86665C531E4B89FF00A5490A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

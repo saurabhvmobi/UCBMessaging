@@ -15,6 +15,18 @@
 		8618FC321E4B4694009E59C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8618FC301E4B4694009E59C9 /* LaunchScreen.storyboard */; };
 		8618FC3D1E4B4694009E59C9 /* UCBMessageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8618FC3C1E4B4694009E59C9 /* UCBMessageTests.m */; };
 		8618FC481E4B4694009E59C9 /* UCBMessageUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8618FC471E4B4694009E59C9 /* UCBMessageUITests.m */; };
+		8618FFCE1E4B488B009E59C9 /* AirshipConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8618FFCD1E4B488B009E59C9 /* AirshipConfig.plist */; };
+		86512FF51E4C540600E7059E /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86512FF41E4C540600E7059E /* MessageViewController.m */; };
+		86512FF81E4C542600E7059E /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 86512FF71E4C542600E7059E /* MessageModel.m */; };
+		86665C561E4B89FF00A5490A /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86665C551E4B89FF00A5490A /* UserNotifications.framework */; };
+		86665C581E4B89FF00A5490A /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86665C571E4B89FF00A5490A /* UserNotificationsUI.framework */; };
+		86665C5C1E4B89FF00A5490A /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86665C5B1E4B89FF00A5490A /* NotificationViewController.m */; };
+		86665C5F1E4B89FF00A5490A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86665C5D1E4B89FF00A5490A /* MainInterface.storyboard */; };
+		86665C631E4B89FF00A5490A /* MessagePushExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 86665C541E4B89FF00A5490A /* MessagePushExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		867F1CB11E4D86A10054B562 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 867F1CB01E4D86A10054B562 /* DBManager.m */; };
+		867F1CB31E4D86B90054B562 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 867F1CB21E4D86B90054B562 /* libsqlite3.0.tbd */; };
+		D06FF283010D80841C154F31 /* libPods-MessagePushExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F308BAFAC52E735B31D53B /* libPods-MessagePushExtension.a */; };
+		D67F7BE5931BDCEE655BC2CB /* libPods-UCBMessage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 848E3B1510F925F564193085 /* libPods-UCBMessage.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,9 +44,32 @@
 			remoteGlobalIDString = 8618FC1E1E4B4693009E59C9;
 			remoteInfo = UCBMessage;
 		};
+		86665C611E4B89FF00A5490A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8618FC171E4B4693009E59C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86665C531E4B89FF00A5490A;
+			remoteInfo = MessagePushExtension;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		86665C671E4B89FF00A5490A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				86665C631E4B89FF00A5490A /* MessagePushExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		6A495FA522C97988F10C5C37 /* Pods-UCBMessage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UCBMessage.release.xcconfig"; path = "Pods/Target Support Files/Pods-UCBMessage/Pods-UCBMessage.release.xcconfig"; sourceTree = "<group>"; };
+		848E3B1510F925F564193085 /* libPods-UCBMessage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UCBMessage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8618FC1F1E4B4694009E59C9 /* UCBMessage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UCBMessage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8618FC231E4B4694009E59C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8618FC251E4B4694009E59C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +86,26 @@
 		8618FC431E4B4694009E59C9 /* UCBMessageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UCBMessageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8618FC471E4B4694009E59C9 /* UCBMessageUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UCBMessageUITests.m; sourceTree = "<group>"; };
 		8618FC491E4B4694009E59C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8618FFCD1E4B488B009E59C9 /* AirshipConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AirshipConfig.plist; sourceTree = "<group>"; };
+		86512FF21E4C455F00E7059E /* UCBMessage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UCBMessage.entitlements; sourceTree = "<group>"; };
+		86512FF31E4C540600E7059E /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		86512FF41E4C540600E7059E /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		86512FF61E4C542600E7059E /* MessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageModel.h; sourceTree = "<group>"; };
+		86512FF71E4C542600E7059E /* MessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageModel.m; sourceTree = "<group>"; };
+		86665C541E4B89FF00A5490A /* MessagePushExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MessagePushExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		86665C551E4B89FF00A5490A /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		86665C571E4B89FF00A5490A /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		86665C5A1E4B89FF00A5490A /* NotificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationViewController.h; sourceTree = "<group>"; };
+		86665C5B1E4B89FF00A5490A /* NotificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationViewController.m; sourceTree = "<group>"; };
+		86665C5E1E4B89FF00A5490A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		86665C601E4B89FF00A5490A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		867F1CAF1E4D86A10054B562 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		867F1CB01E4D86A10054B562 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		867F1CB21E4D86B90054B562 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		98CD48D85EAADCCF558B7198 /* Pods-UCBMessage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UCBMessage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UCBMessage/Pods-UCBMessage.debug.xcconfig"; sourceTree = "<group>"; };
+		B00D4823A96D4AEBD999DE70 /* Pods-MessagePushExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessagePushExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MessagePushExtension/Pods-MessagePushExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		C35827C74DBBA45603E4B45D /* Pods-MessagePushExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessagePushExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-MessagePushExtension/Pods-MessagePushExtension.release.xcconfig"; sourceTree = "<group>"; };
+		E4F308BAFAC52E735B31D53B /* libPods-MessagePushExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MessagePushExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D67F7BE5931BDCEE655BC2CB /* libPods-UCBMessage.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,16 +131,53 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		86665C511E4B89FF00A5490A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				867F1CB31E4D86B90054B562 /* libsqlite3.0.tbd in Frameworks */,
+				86665C581E4B89FF00A5490A /* UserNotificationsUI.framework in Frameworks */,
+				86665C561E4B89FF00A5490A /* UserNotifications.framework in Frameworks */,
+				D06FF283010D80841C154F31 /* libPods-MessagePushExtension.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21FCE67F04ED1ADE5D361466 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				98CD48D85EAADCCF558B7198 /* Pods-UCBMessage.debug.xcconfig */,
+				6A495FA522C97988F10C5C37 /* Pods-UCBMessage.release.xcconfig */,
+				B00D4823A96D4AEBD999DE70 /* Pods-MessagePushExtension.debug.xcconfig */,
+				C35827C74DBBA45603E4B45D /* Pods-MessagePushExtension.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4C1ECB2C24253361FAFA1F0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				867F1CB21E4D86B90054B562 /* libsqlite3.0.tbd */,
+				848E3B1510F925F564193085 /* libPods-UCBMessage.a */,
+				86665C551E4B89FF00A5490A /* UserNotifications.framework */,
+				86665C571E4B89FF00A5490A /* UserNotificationsUI.framework */,
+				E4F308BAFAC52E735B31D53B /* libPods-MessagePushExtension.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8618FC161E4B4693009E59C9 = {
 			isa = PBXGroup;
 			children = (
 				8618FC211E4B4694009E59C9 /* UCBMessage */,
 				8618FC3B1E4B4694009E59C9 /* UCBMessageTests */,
 				8618FC461E4B4694009E59C9 /* UCBMessageUITests */,
+				86665C591E4B89FF00A5490A /* MessagePushExtension */,
 				8618FC201E4B4694009E59C9 /* Products */,
+				21FCE67F04ED1ADE5D361466 /* Pods */,
+				4C1ECB2C24253361FAFA1F0D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +187,7 @@
 				8618FC1F1E4B4694009E59C9 /* UCBMessage.app */,
 				8618FC381E4B4694009E59C9 /* UCBMessageTests.xctest */,
 				8618FC431E4B4694009E59C9 /* UCBMessageUITests.xctest */,
+				86665C541E4B89FF00A5490A /* MessagePushExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,14 +195,22 @@
 		8618FC211E4B4694009E59C9 /* UCBMessage */ = {
 			isa = PBXGroup;
 			children = (
+				86512FF21E4C455F00E7059E /* UCBMessage.entitlements */,
 				8618FC251E4B4694009E59C9 /* AppDelegate.h */,
 				8618FC261E4B4694009E59C9 /* AppDelegate.m */,
+				867F1CAF1E4D86A10054B562 /* DBManager.h */,
+				867F1CB01E4D86A10054B562 /* DBManager.m */,
 				8618FC281E4B4694009E59C9 /* ViewController.h */,
 				8618FC291E4B4694009E59C9 /* ViewController.m */,
+				86512FF61E4C542600E7059E /* MessageModel.h */,
+				86512FF71E4C542600E7059E /* MessageModel.m */,
+				86512FF31E4C540600E7059E /* MessageViewController.h */,
+				86512FF41E4C540600E7059E /* MessageViewController.m */,
 				8618FC2B1E4B4694009E59C9 /* Main.storyboard */,
 				8618FC2E1E4B4694009E59C9 /* Assets.xcassets */,
 				8618FC301E4B4694009E59C9 /* LaunchScreen.storyboard */,
 				8618FC331E4B4694009E59C9 /* Info.plist */,
+				8618FFCD1E4B488B009E59C9 /* AirshipConfig.plist */,
 				8618FC221E4B4694009E59C9 /* Supporting Files */,
 			);
 			path = UCBMessage;
@@ -140,6 +242,17 @@
 			path = UCBMessageUITests;
 			sourceTree = "<group>";
 		};
+		86665C591E4B89FF00A5490A /* MessagePushExtension */ = {
+			isa = PBXGroup;
+			children = (
+				86665C5A1E4B89FF00A5490A /* NotificationViewController.h */,
+				86665C5B1E4B89FF00A5490A /* NotificationViewController.m */,
+				86665C5D1E4B89FF00A5490A /* MainInterface.storyboard */,
+				86665C601E4B89FF00A5490A /* Info.plist */,
+			);
+			path = MessagePushExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,13 +260,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8618FC4C1E4B4694009E59C9 /* Build configuration list for PBXNativeTarget "UCBMessage" */;
 			buildPhases = (
+				197DD42FF47BE8B642689AA0 /* Check Pods Manifest.lock */,
 				8618FC1B1E4B4693009E59C9 /* Sources */,
 				8618FC1C1E4B4693009E59C9 /* Frameworks */,
 				8618FC1D1E4B4693009E59C9 /* Resources */,
+				C86E41B34AEA2E1E98A48BEA /* Embed Pods Frameworks */,
+				56677BD9662AE098EE102F7C /* Copy Pods Resources */,
+				86665C671E4B89FF00A5490A /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				86665C621E4B89FF00A5490A /* PBXTargetDependency */,
 			);
 			name = UCBMessage;
 			productName = UCBMessage;
@@ -196,6 +314,26 @@
 			productReference = 8618FC431E4B4694009E59C9 /* UCBMessageUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		86665C531E4B89FF00A5490A /* MessagePushExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86665C661E4B89FF00A5490A /* Build configuration list for PBXNativeTarget "MessagePushExtension" */;
+			buildPhases = (
+				16470CC0782850C9D1856CC4 /* Check Pods Manifest.lock */,
+				86665C501E4B89FF00A5490A /* Sources */,
+				86665C511E4B89FF00A5490A /* Frameworks */,
+				86665C521E4B89FF00A5490A /* Resources */,
+				3AA15DEBEA5E5E3EE039A970 /* Embed Pods Frameworks */,
+				20F11DCAF5A924BD81B26A32 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MessagePushExtension;
+			productName = MessagePushExtension;
+			productReference = 86665C541E4B89FF00A5490A /* MessagePushExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -209,6 +347,14 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = QGMN7468R5;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					8618FC371E4B4694009E59C9 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -222,6 +368,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 8618FC1E1E4B4693009E59C9;
 					};
+					86665C531E4B89FF00A5490A = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = QGMN7468R5;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 8618FC1A1E4B4693009E59C9 /* Build configuration list for PBXProject "UCBMessage" */;
@@ -231,6 +382,36 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
+				cs,
+				da,
+				de,
+				"es-419",
+				es,
+				fi,
+				fr,
+				hi,
+				hu,
+				id,
+				it,
+				iw,
+				ja,
+				ko,
+				ms,
+				nl,
+				no,
+				pl,
+				"pt-PT",
+				pt,
+				ro,
+				ru,
+				sk,
+				sv,
+				th,
+				tr,
+				vi,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = 8618FC161E4B4693009E59C9;
 			productRefGroup = 8618FC201E4B4694009E59C9 /* Products */;
@@ -240,6 +421,7 @@
 				8618FC1E1E4B4693009E59C9 /* UCBMessage */,
 				8618FC371E4B4694009E59C9 /* UCBMessageTests */,
 				8618FC421E4B4694009E59C9 /* UCBMessageUITests */,
+				86665C531E4B89FF00A5490A /* MessagePushExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -252,6 +434,7 @@
 				8618FC321E4B4694009E59C9 /* LaunchScreen.storyboard in Resources */,
 				8618FC2F1E4B4694009E59C9 /* Assets.xcassets in Resources */,
 				8618FC2D1E4B4694009E59C9 /* Main.storyboard in Resources */,
+				8618FFCE1E4B488B009E59C9 /* AirshipConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +452,108 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		86665C521E4B89FF00A5490A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86665C5F1E4B89FF00A5490A /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16470CC0782850C9D1856CC4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		197DD42FF47BE8B642689AA0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		20F11DCAF5A924BD81B26A32 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MessagePushExtension/Pods-MessagePushExtension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3AA15DEBEA5E5E3EE039A970 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MessagePushExtension/Pods-MessagePushExtension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56677BD9662AE098EE102F7C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UCBMessage/Pods-UCBMessage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C86E41B34AEA2E1E98A48BEA /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UCBMessage/Pods-UCBMessage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8618FC1B1E4B4693009E59C9 /* Sources */ = {
@@ -278,6 +562,9 @@
 			files = (
 				8618FC2A1E4B4694009E59C9 /* ViewController.m in Sources */,
 				8618FC271E4B4694009E59C9 /* AppDelegate.m in Sources */,
+				86512FF81E4C542600E7059E /* MessageModel.m in Sources */,
+				867F1CB11E4D86A10054B562 /* DBManager.m in Sources */,
+				86512FF51E4C540600E7059E /* MessageViewController.m in Sources */,
 				8618FC241E4B4694009E59C9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +585,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		86665C501E4B89FF00A5490A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86665C5C1E4B89FF00A5490A /* NotificationViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -310,6 +605,11 @@
 			isa = PBXTargetDependency;
 			target = 8618FC1E1E4B4693009E59C9 /* UCBMessage */;
 			targetProxy = 8618FC441E4B4694009E59C9 /* PBXContainerItemProxy */;
+		};
+		86665C621E4B89FF00A5490A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86665C531E4B89FF00A5490A /* MessagePushExtension */;
+			targetProxy = 86665C611E4B89FF00A5490A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -328,6 +628,14 @@
 				8618FC311E4B4694009E59C9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		86665C5D1E4B89FF00A5490A /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86665C5E1E4B89FF00A5490A /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -425,24 +733,38 @@
 		};
 		8618FC4D1E4B4694009E59C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98CD48D85EAADCCF558B7198 /* Pods-UCBMessage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UCBMessage/UCBMessage.entitlements;
 				DEVELOPMENT_TEAM = QGMN7468R5;
 				INFOPLIST_FILE = UCBMessage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "vmoksha-technology.UCBMessage";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Airship",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vmoksha.furban;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		8618FC4E1E4B4694009E59C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A495FA522C97988F10C5C37 /* Pods-UCBMessage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UCBMessage/UCBMessage.entitlements;
 				DEVELOPMENT_TEAM = QGMN7468R5;
 				INFOPLIST_FILE = UCBMessage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "vmoksha-technology.UCBMessage";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Airship",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vmoksha.furban;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -497,6 +819,32 @@
 			};
 			name = Release;
 		};
+		86665C641E4B89FF00A5490A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B00D4823A96D4AEBD999DE70 /* Pods-MessagePushExtension.debug.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = QGMN7468R5;
+				INFOPLIST_FILE = MessagePushExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vmoksha.furban.MessagePushExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		86665C651E4B89FF00A5490A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C35827C74DBBA45603E4B45D /* Pods-MessagePushExtension.release.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = QGMN7468R5;
+				INFOPLIST_FILE = MessagePushExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vmoksha.furban.MessagePushExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -516,6 +864,7 @@
 				8618FC4E1E4B4694009E59C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8618FC4F1E4B4694009E59C9 /* Build configuration list for PBXNativeTarget "UCBMessageTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +873,7 @@
 				8618FC511E4B4694009E59C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8618FC521E4B4694009E59C9 /* Build configuration list for PBXNativeTarget "UCBMessageUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +882,16 @@
 				8618FC541E4B4694009E59C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86665C661E4B89FF00A5490A /* Build configuration list for PBXNativeTarget "MessagePushExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86665C641E4B89FF00A5490A /* Debug */,
+				86665C651E4B89FF00A5490A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

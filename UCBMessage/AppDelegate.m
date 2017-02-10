@@ -7,8 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import <UrbanAirship-iOS-SDK/AirshipLib.h>
+#import "MessageModel.h"
 
-@interface AppDelegate ()
+
+
+
+@interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
 @end
 
@@ -17,6 +22,38 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [UAirship takeOff];
+    
+    [UAirship push].userPushNotificationsEnabled = YES;
+
+    [UNUserNotificationCenter currentNotificationCenter].delegate = self;
+
+    [[UAirship push] addTag:@"MyTag"];
+    [[UAirship push] updateRegistration];
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+   
+    // Define an action for the category
+    UANotificationAction *categoryAction = [UANotificationAction actionWithIdentifier: @"category_action"
+                                                                                title:@"Action!"
+                                                                              options:(UNNotificationActionOptionForeground |
+                                                                                       UNNotificationActionOptionDestructive |
+                                                                                       UNNotificationActionOptionAuthenticationRequired)];
+    
+    // Define the category
+    UANotificationCategory *category = [UANotificationCategory categoryWithIdentifier:@"custom_category"
+                                                                              actions:@[categoryAction]
+                                                                    intentIdentifiers:@[]
+                                                                              options:UNNotificationCategoryOptionNone];
+    
+    // Set the custom categories
+    [UAirship push].customCategories = [NSSet setWithArray:@[category]];
+    
+    // Update registration
+    [[UAirship push] updateRegistration];
+    
+    
+    
     return YES;
 }
 
@@ -46,6 +83,78 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+
+
+
+// UIApplicationDelegate methods
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    [UAAppIntegration application:application didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+}
+
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
+    
+    [UAAppIntegration application:application didRegisterUserNotificationSettings:notificationSettings];
+}
+
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    [UAAppIntegration application:application didReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler];
+
+
+    [self getNotification:userInfo];
+
+
+}
+
+- (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)userInfo completionHandler:(void (^)())handler {
+    [UAAppIntegration application:application handleActionWithIdentifier:identifier forRemoteNotification:userInfo completionHandler:handler];
+}
+
+- (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)userInfo withResponseInfo:(NSDictionary *)responseInfo completionHandler:(void (^)())handler {
+    [UAAppIntegration application:application handleActionWithIdentifier:identifier forRemoteNotification:userInfo withResponseInfo:responseInfo completionHandler:handler];
+}
+
+// UNUserNotificationCenterDelegate methods
+
+- (void) userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
+    [UAAppIntegration userNotificationCenter:center willPresentNotification:notification withCompletionHandler:completionHandler];
+}
+
+- (void) userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler {
+    [UAAppIntegration userNotificationCenter:center didReceiveNotificationResponse:response withCompletionHandler:completionHandler];
+}
+
+- (void)getNotification:(NSDictionary *)appInfo
+{
+    NSString *message = appInfo[@"display"][@"alert"];
+    
+    MessageModel *aModel =[[MessageModel alloc]init];
+    aModel.messageTitle = message;
+    [self.messageArr addObject:aModel];
+
+}
+
+
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response{
+
+
+}
+
+-(void)receivedNotificationResponse:(UANotificationResponse *)notificationResponse
+                  completionHandler:(void (^)())completionHandler
+{
+
+
+
+
+}
+
+
+
+
+
+
 
 
 @end
