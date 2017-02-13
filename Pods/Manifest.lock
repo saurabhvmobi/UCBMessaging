@@ -1,0 +1,13 @@
+PODS:
+  - UrbanAirship-iOS-AppExtensions (8.0.4)
+  - UrbanAirship-iOS-SDK (8.0.4)
+
+DEPENDENCIES:
+  - UrbanAirship-iOS-AppExtensions
+  - UrbanAirship-iOS-SDK
+
+SPEC CHECKSUMS:
+  UrbanAirship-iOS-AppExtensions: be55bfb40f2fae5a08ad95bb934a2c770f027f04
+  UrbanAirship-iOS-SDK: cf625099f5934d91a8f21c69259c4e0b537b6cbd
+
+COCOAPODS: 0.39.0
