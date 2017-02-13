@@ -24,7 +24,8 @@
  */
 
 #import <UrbanAirship-iOS-SDK/AirshipLib.h>
+#import "DBManager.h"
 
-@interface PushHandler : NSObject <UAPushNotificationDelegate>
+@interface PushHandler : NSObject <UAPushNotificationDelegate,DBManagerDelegate>
 
 @end

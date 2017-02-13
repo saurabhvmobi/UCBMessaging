@@ -16,6 +16,7 @@
 		8618FC3D1E4B4694009E59C9 /* UCBMessageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8618FC3C1E4B4694009E59C9 /* UCBMessageTests.m */; };
 		8618FC481E4B4694009E59C9 /* UCBMessageUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8618FC471E4B4694009E59C9 /* UCBMessageUITests.m */; };
 		8618FFCE1E4B488B009E59C9 /* AirshipConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8618FFCD1E4B488B009E59C9 /* AirshipConfig.plist */; };
+		86468D0E1E51C02E005A9731 /* PushHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 86468D0D1E51C02E005A9731 /* PushHandler.m */; };
 		86512FF51E4C540600E7059E /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86512FF41E4C540600E7059E /* MessageViewController.m */; };
 		86512FF81E4C542600E7059E /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 86512FF71E4C542600E7059E /* MessageModel.m */; };
 		86665C561E4B89FF00A5490A /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86665C551E4B89FF00A5490A /* UserNotifications.framework */; };
@@ -87,6 +88,8 @@
 		8618FC471E4B4694009E59C9 /* UCBMessageUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UCBMessageUITests.m; sourceTree = "<group>"; };
 		8618FC491E4B4694009E59C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8618FFCD1E4B488B009E59C9 /* AirshipConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AirshipConfig.plist; sourceTree = "<group>"; };
+		86468D0C1E51C02E005A9731 /* PushHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushHandler.h; sourceTree = "<group>"; };
+		86468D0D1E51C02E005A9731 /* PushHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushHandler.m; sourceTree = "<group>"; };
 		86512FF21E4C455F00E7059E /* UCBMessage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UCBMessage.entitlements; sourceTree = "<group>"; };
 		86512FF31E4C540600E7059E /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		86512FF41E4C540600E7059E /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
@@ -200,6 +203,8 @@
 				8618FC261E4B4694009E59C9 /* AppDelegate.m */,
 				867F1CAF1E4D86A10054B562 /* DBManager.h */,
 				867F1CB01E4D86A10054B562 /* DBManager.m */,
+				86468D0C1E51C02E005A9731 /* PushHandler.h */,
+				86468D0D1E51C02E005A9731 /* PushHandler.m */,
 				8618FC281E4B4694009E59C9 /* ViewController.h */,
 				8618FC291E4B4694009E59C9 /* ViewController.m */,
 				86512FF61E4C542600E7059E /* MessageModel.h */,
@@ -566,6 +571,7 @@
 				867F1CB11E4D86A10054B562 /* DBManager.m in Sources */,
 				86512FF51E4C540600E7059E /* MessageViewController.m in Sources */,
 				8618FC241E4B4694009E59C9 /* main.m in Sources */,
+				86468D0E1E51C02E005A9731 /* PushHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

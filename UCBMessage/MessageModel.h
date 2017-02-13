@@ -10,6 +10,9 @@
 
 @interface MessageModel : NSObject
 
-@property(nonatomic,strong)NSString *messageTitle;
+@property(nonatomic,strong)NSString *body;
+@property(nonatomic,strong)NSString *subtitle;
+@property(nonatomic,strong)NSString *title;
+
 
 @end

@@ -24,51 +24,35 @@
  */
 
 #import "PushHandler.h"
+#import "DBManager.h"
+
+
+
 
 @implementation PushHandler
+{
+    DBManager *dbManager;
+}
+
 
 -(void)receivedBackgroundNotification:(UANotificationContent *)notificationContent completionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     // Application received a background notification
     UA_LDEBUG(@"The application received a background notification");
 
     // Call the completion handler
-    completionHandler(UIBackgroundFetchResultNoData);
+
+    NSLog(@"%@",notificationContent.alertBody);
+    [self savePushNotificationinSqlite:notificationContent];
 }
 
 -(void)receivedForegroundNotification:(UANotificationContent *)notificationContent completionHandler:(void (^)())completionHandler {
     // Application received a foreground notification
     UA_LDEBUG(@"The application received a foreground notification");
 
-    // iOS 10 - let foreground presentations options handle it
-    if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 0, 0}]) {
-        completionHandler();
-        return;
-    }
-
-    // iOS 8 & 9 - show an alert dialog
-    NSString *alertTitle = notificationContent.alertTitle ? notificationContent.alertTitle : NSLocalizedStringFromTable(@"UA_Notification_Title", @"UAPushUI", @"System Push Settings Label");
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:alertTitle
-                                                                             message:notificationContent.alertBody
-                                                                      preferredStyle:UIAlertControllerStyleAlert];
-
-    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-
-        // If we have a message ID run the display inbox action to fetch and display the message.
-        NSString *messageId = [UAInboxUtils inboxMessageIDFromNotification:notificationContent.notificationInfo];
-        if (messageId) {
-            [UAActionRunner runActionWithName:kUADisplayInboxActionDefaultRegistryName
-                                        value:messageId
-                                    situation:UASituationManualInvocation];
-        }
-    }];
-
-    [alertController addAction:okAction];
-
-    UIViewController *topController = [UIApplication sharedApplication].keyWindow.rootViewController;
-    alertController.popoverPresentationController.sourceView = topController.view;
-    [topController presentViewController:alertController animated:YES completion:nil];
+    [self savePushNotificationinSqlite:notificationContent];
 
     completionHandler();
+
 }
 
 -(void)receivedNotificationResponse:(UANotificationResponse *)notificationResponse completionHandler:(void (^)())completionHandler {
@@ -80,5 +64,32 @@
 - (UNNotificationPresentationOptions)presentationOptionsForNotification:(UNNotification *)notification {
     return UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionSound;
 }
+
+
+
+
+-(void)savePushNotificationinSqlite:(UANotificationContent *)notificationContent
+{
+    
+   
+    NSDictionary *notificationInfo =  notificationContent.notificationInfo;
+    NSDictionary *notificationAlert =notificationInfo[@"aps"][@"alert"];
+    NSString *body = notificationAlert[@"body"];
+    NSString *subtitle = notificationAlert[@"subtitle"];
+    NSString *title = notificationAlert[@"title"];
+    if (dbManager == nil)
+    {
+        dbManager = [[DBManager alloc] initWithFileName:@"UCBMessage.db"];
+        dbManager.delegate=self;
+    }
+    NSString *createQuery = @"create table if not exists Message (body text, subtitle text,title text)";
+    [dbManager createTableForQuery:createQuery];
+   
+        NSString *insertSQL = [NSString stringWithFormat:@"INSERT OR REPLACE INTO  Message (body,subtitle,title) values ('%@', '%@', '%@')",body,subtitle,title];
+        [dbManager saveDataToDBForQuery:insertSQL];
+   }
+
+
+
 
 @end
