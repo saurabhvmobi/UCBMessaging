@@ -35,8 +35,6 @@
     NSString *channelID = [UAirship push].channelID;
     NSLog(@"My Application Channel ID: %@", channelID);
     
-    
-    
     [UAirship push].notificationOptions = (UANotificationOptionAlert |
                                            UANotificationOptionBadge |
                                            UANotificationOptionSound);
@@ -50,10 +48,36 @@
     [UAirship push].pushNotificationDelegate = self.pushHandler;
     [UAirship push].registrationDelegate = self;
 
-    
+    [UAirship inAppMessaging].displayDelay = 5;
+    [UAirship inAppMessaging].displayASAPEnabled = YES;
+
+
     
     [[UAirship push] addTag:@"MyTag"];
     [[UAirship push] updateRegistration];
+    
+  
+    
+    
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+//    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
+//                                                           NSFontAttributeName : [UIFont fontWithName:@"MuseoSans-700" size:20]}];
+//    
+//    [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
+//                                                           NSFontAttributeName : [UIFont fontWithName:@"MuseoSans-700" size:16]}
+//                                                forState:(UIControlStateNormal)];
+//    
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    
+    
+    //tab bar colour
+    //[[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:.588 green:.729 blue:.223 alpha:1]];
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:.13 green:.31 blue:.46 alpha:1]];
+    
+  
     
     return YES;
 }

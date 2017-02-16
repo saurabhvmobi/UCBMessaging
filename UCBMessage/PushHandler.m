@@ -72,11 +72,25 @@
 {
     
    
+//    NSDictionary *notificationInfo =  notificationContent.notificationInfo;
+//    NSDictionary *notificationAlert =notificationInfo[@"aps"][@"alert"];
+//    NSString *body = notificationAlert[@"body"];
+//    NSString *subtitle = notificationAlert[@"subtitle"];
+//    NSString *title = notificationAlert[@"title"];
+//    
+    
+    
     NSDictionary *notificationInfo =  notificationContent.notificationInfo;
     NSDictionary *notificationAlert =notificationInfo[@"aps"][@"alert"];
     NSString *body = notificationAlert[@"body"];
     NSString *subtitle = notificationAlert[@"subtitle"];
     NSString *title = notificationAlert[@"title"];
+    
+
+    
+    
+    
+    
     if (dbManager == nil)
     {
         dbManager = [[DBManager alloc] initWithFileName:@"UCBMessage.db"];

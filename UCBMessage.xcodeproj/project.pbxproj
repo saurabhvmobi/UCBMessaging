@@ -105,6 +105,9 @@
 		867F1CAF1E4D86A10054B562 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		867F1CB01E4D86A10054B562 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 		867F1CB21E4D86B90054B562 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		8686D37B1E55909D0094FBEA /* MuseoSans-100.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoSans-100.otf"; sourceTree = "<group>"; };
+		8686D37C1E55909D0094FBEA /* MuseoSans-300.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoSans-300.otf"; sourceTree = "<group>"; };
+		8686D37D1E55909D0094FBEA /* MuseoSans-700.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoSans-700.otf"; sourceTree = "<group>"; };
 		98CD48D85EAADCCF558B7198 /* Pods-UCBMessage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UCBMessage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UCBMessage/Pods-UCBMessage.debug.xcconfig"; sourceTree = "<group>"; };
 		B00D4823A96D4AEBD999DE70 /* Pods-MessagePushExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessagePushExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MessagePushExtension/Pods-MessagePushExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		C35827C74DBBA45603E4B45D /* Pods-MessagePushExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessagePushExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-MessagePushExtension/Pods-MessagePushExtension.release.xcconfig"; sourceTree = "<group>"; };
@@ -199,6 +202,9 @@
 			isa = PBXGroup;
 			children = (
 				86512FF21E4C455F00E7059E /* UCBMessage.entitlements */,
+				8686D37B1E55909D0094FBEA /* MuseoSans-100.otf */,
+				8686D37C1E55909D0094FBEA /* MuseoSans-300.otf */,
+				8686D37D1E55909D0094FBEA /* MuseoSans-700.otf */,
 				8618FC251E4B4694009E59C9 /* AppDelegate.h */,
 				8618FC261E4B4694009E59C9 /* AppDelegate.m */,
 				867F1CAF1E4D86A10054B562 /* DBManager.h */,

@@ -29,6 +29,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+   self.title = @"UCB Sales Message";
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,6 +43,9 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    self.view.backgroundColor = [UIColor colorWithRed:.7 green:.92 blue:.96 alpha:1];
+
+    
     messageArray =[[NSMutableArray alloc]init];
     [self getData];
     [self.tableView reloadData];
@@ -70,7 +75,7 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 75;
+    return 80;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
