@@ -26,6 +26,9 @@
 		86665C631E4B89FF00A5490A /* MessagePushExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 86665C541E4B89FF00A5490A /* MessagePushExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		867F1CB11E4D86A10054B562 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 867F1CB01E4D86A10054B562 /* DBManager.m */; };
 		867F1CB31E4D86B90054B562 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 867F1CB21E4D86B90054B562 /* libsqlite3.0.tbd */; };
+		8686D3821E55A9730094FBEA /* InboxDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8686D3811E55A9730094FBEA /* InboxDelegate.m */; };
+		8686D3851E55A97E0094FBEA /* MessageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8686D3841E55A97E0094FBEA /* MessageCenterViewController.m */; };
+		8686D3881E55C05E0094FBEA /* MessageDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8686D3871E55C05E0094FBEA /* MessageDetailsViewController.m */; };
 		D06FF283010D80841C154F31 /* libPods-MessagePushExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F308BAFAC52E735B31D53B /* libPods-MessagePushExtension.a */; };
 		D67F7BE5931BDCEE655BC2CB /* libPods-UCBMessage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 848E3B1510F925F564193085 /* libPods-UCBMessage.a */; };
 /* End PBXBuildFile section */
@@ -108,6 +111,12 @@
 		8686D37B1E55909D0094FBEA /* MuseoSans-100.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoSans-100.otf"; sourceTree = "<group>"; };
 		8686D37C1E55909D0094FBEA /* MuseoSans-300.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoSans-300.otf"; sourceTree = "<group>"; };
 		8686D37D1E55909D0094FBEA /* MuseoSans-700.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoSans-700.otf"; sourceTree = "<group>"; };
+		8686D3801E55A9730094FBEA /* InboxDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InboxDelegate.h; sourceTree = "<group>"; };
+		8686D3811E55A9730094FBEA /* InboxDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InboxDelegate.m; sourceTree = "<group>"; };
+		8686D3831E55A97E0094FBEA /* MessageCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCenterViewController.h; sourceTree = "<group>"; };
+		8686D3841E55A97E0094FBEA /* MessageCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCenterViewController.m; sourceTree = "<group>"; };
+		8686D3861E55C05E0094FBEA /* MessageDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDetailsViewController.h; sourceTree = "<group>"; };
+		8686D3871E55C05E0094FBEA /* MessageDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDetailsViewController.m; sourceTree = "<group>"; };
 		98CD48D85EAADCCF558B7198 /* Pods-UCBMessage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UCBMessage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UCBMessage/Pods-UCBMessage.debug.xcconfig"; sourceTree = "<group>"; };
 		B00D4823A96D4AEBD999DE70 /* Pods-MessagePushExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessagePushExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MessagePushExtension/Pods-MessagePushExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		C35827C74DBBA45603E4B45D /* Pods-MessagePushExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessagePushExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-MessagePushExtension/Pods-MessagePushExtension.release.xcconfig"; sourceTree = "<group>"; };
@@ -217,6 +226,12 @@
 				86512FF71E4C542600E7059E /* MessageModel.m */,
 				86512FF31E4C540600E7059E /* MessageViewController.h */,
 				86512FF41E4C540600E7059E /* MessageViewController.m */,
+				8686D3861E55C05E0094FBEA /* MessageDetailsViewController.h */,
+				8686D3871E55C05E0094FBEA /* MessageDetailsViewController.m */,
+				8686D3801E55A9730094FBEA /* InboxDelegate.h */,
+				8686D3811E55A9730094FBEA /* InboxDelegate.m */,
+				8686D3831E55A97E0094FBEA /* MessageCenterViewController.h */,
+				8686D3841E55A97E0094FBEA /* MessageCenterViewController.m */,
 				8618FC2B1E4B4694009E59C9 /* Main.storyboard */,
 				8618FC2E1E4B4694009E59C9 /* Assets.xcassets */,
 				8618FC301E4B4694009E59C9 /* LaunchScreen.storyboard */,
@@ -573,11 +588,14 @@
 			files = (
 				8618FC2A1E4B4694009E59C9 /* ViewController.m in Sources */,
 				8618FC271E4B4694009E59C9 /* AppDelegate.m in Sources */,
+				8686D3851E55A97E0094FBEA /* MessageCenterViewController.m in Sources */,
 				86512FF81E4C542600E7059E /* MessageModel.m in Sources */,
 				867F1CB11E4D86A10054B562 /* DBManager.m in Sources */,
 				86512FF51E4C540600E7059E /* MessageViewController.m in Sources */,
+				8686D3821E55A9730094FBEA /* InboxDelegate.m in Sources */,
 				8618FC241E4B4694009E59C9 /* main.m in Sources */,
 				86468D0E1E51C02E005A9731 /* PushHandler.m in Sources */,
+				8686D3881E55C05E0094FBEA /* MessageDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,14 +9,17 @@
 #import "MessageViewController.h"
 #import "DBManager.h"
 #import "MessageModel.h"
+#import "MessageDetailsViewController.h"
 @interface MessageViewController ()<DBManagerDelegate>
 {
     NSMutableArray *messageArray;
     DBManager *dbManager;
+    NSIndexPath *selectedIndex;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableHeightConst;
+@property (weak, nonatomic) IBOutlet UIView *containerView;
 
 
 @end
@@ -30,6 +33,9 @@
     // Do any additional setup after loading the view.
 
    self.title = @"UCB Sales Message";
+    self.navigationController.navigationBarHidden = NO;
+    [self.navigationItem setHidesBackButton:YES];
+
 
 }
 
@@ -54,15 +60,22 @@
 
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+     selectedIndex = sender;
+     MessageModel *aModel = messageArray[selectedIndex.row];
+     MessageDetailsViewController *messageDetails = segue.destinationViewController;
+     messageDetails.aModel = aModel;
+ 
+ 
+ 
+ }
+
 
 
 
@@ -98,9 +111,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    UILabel *titleLable = (UILabel *)[cell viewWithTag:100];
-    titleLable.backgroundColor = [UIColor redColor];
+    [self performSegueWithIdentifier:@"MessagetoMessageDetailsSegua" sender:indexPath];
 }
 
 
@@ -110,13 +121,10 @@
     NSInteger noOfCells = [messageArray count];
    
     CGFloat cellHeigth = [self.tableView rowHeight];
-    
     CGFloat heigthOfTableView = cellHeigth*noOfCells;
-    
-   // heigthOfTableView = MIN(heigthOfTableView, self.containerView.frame.size.height);
-    
+    heigthOfTableView = MIN(heigthOfTableView, self.containerView.frame.size.height);
     self.tableHeightConst.constant = heigthOfTableView;
-  //  [self.containerView layoutIfNeeded];
+    [self.containerView layoutIfNeeded];
 }
 
 

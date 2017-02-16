@@ -81,14 +81,13 @@
     
     
     NSDictionary *notificationInfo =  notificationContent.notificationInfo;
-    NSDictionary *notificationAlert =notificationInfo[@"aps"][@"alert"];
-    NSString *body = notificationAlert[@"body"];
-    NSString *subtitle = notificationAlert[@"subtitle"];
-    NSString *title = notificationAlert[@"title"];
+    NSDictionary *notificationAlert =notificationInfo[@"com.urbanairship.in_app"][@"display"];
+    
+    NSString *body = notificationAlert[@"alert"];
+    NSString *subtitle = notificationAlert[@"alert"];
+    NSString *title =notificationAlert[@"alert"];
     
 
-    
-    
     
     
     if (dbManager == nil)

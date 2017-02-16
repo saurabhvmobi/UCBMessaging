@@ -13,12 +13,14 @@
 #import "UAConfig.h"
 #import "UAPush.h"
 #import "PushHandler.h"
+#import "InboxDelegate.h"
+
 
 
 
 @interface AppDelegate ()<UAPushNotificationDelegate,UNUserNotificationCenterDelegate>
 @property(nonatomic, strong) PushHandler *pushHandler;
-//@property(nonatomic, strong) InboxDelegate *inboxDelegate;
+@property(nonatomic, strong) InboxDelegate *inboxDelegate;
 
 
 @end
@@ -44,19 +46,37 @@
     
     
     [UNUserNotificationCenter currentNotificationCenter].delegate = self;
+    
+    // Set a custom delegate for handling message center events
+    self.inboxDelegate = [[InboxDelegate alloc] initWithRootViewController:self.window.rootViewController];
+    [UAirship inbox].delegate = self.inboxDelegate;
+    
     self.pushHandler = [[PushHandler alloc] init];
     [UAirship push].pushNotificationDelegate = self.pushHandler;
     [UAirship push].registrationDelegate = self;
 
-    [UAirship inAppMessaging].displayDelay = 5;
+    
+    // In App messaging Parameter
+    
+    [UAirship inAppMessaging].displayDelay = 10;
     [UAirship inAppMessaging].displayASAPEnabled = YES;
+    [[UAirship inAppMessaging] displayPendingMessage];
 
 
+    
+   
     
     [[UAirship push] addTag:@"MyTag"];
     [[UAirship push] updateRegistration];
     
   
+    
+ 
+    
+   
+    
+    
+    
     
     
     
@@ -86,6 +106,10 @@
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+    if ([UAirship inbox].messageList.unreadCount >= 0) {
+        application.applicationIconBadgeNumber = [UAirship inbox].messageList.unreadCount;
+    }
+
 }
 
 
@@ -108,7 +132,6 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
 
 
 
