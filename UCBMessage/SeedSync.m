@@ -12,6 +12,7 @@
 #import "SeedModel.h"
 #import "Postman.h"
 #import "Constant.h"
+#import "UserInfo.h"
 
 @interface SeedSync () <postmanDelegate, DBManagerDelegate>
 
@@ -41,8 +42,7 @@
 
 - (void)initialize
 {
-    URLString = SEED_API;
-    
+    URLString =[NSString stringWithFormat:@"%@%@",[UserInfo sharedUserInfo].applicationBaseURL,SEED_API];
     postMan = [[Postman alloc] init];
     postMan.delegate = self;
 }

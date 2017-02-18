@@ -36,6 +36,9 @@
 		867971641E589AEF00732D56 /* AirshipConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 867971631E589AEF00732D56 /* AirshipConfig.plist */; };
 		8679716C1E58A0ED00732D56 /* SeedSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 867971691E58A0ED00732D56 /* SeedSync.m */; };
 		8679716D1E58A0ED00732D56 /* SeedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8679716B1E58A0ED00732D56 /* SeedModel.m */; };
+		867971751E58E4EF00732D56 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 867971701E58E4EF00732D56 /* NSString+HTML.m */; };
+		867971761E58E4EF00732D56 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 867971721E58E4EF00732D56 /* GTMNSString+HTML.m */; };
+		867971771E58E4EF00732D56 /* NSDateFormatter+Locale.m in Sources */ = {isa = PBXBuildFile; fileRef = 867971741E58E4EF00732D56 /* NSDateFormatter+Locale.m */; };
 		867F1CB31E4D86B90054B562 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 867F1CB21E4D86B90054B562 /* libsqlite3.0.tbd */; };
 		D06FF283010D80841C154F31 /* libPods-MessagePushExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F308BAFAC52E735B31D53B /* libPods-MessagePushExtension.a */; };
 		D67F7BE5931BDCEE655BC2CB /* libPods-UCBMessage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 848E3B1510F925F564193085 /* libPods-UCBMessage.a */; };
@@ -136,6 +139,12 @@
 		867971691E58A0ED00732D56 /* SeedSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeedSync.m; sourceTree = "<group>"; };
 		8679716A1E58A0ED00732D56 /* SeedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeedModel.h; sourceTree = "<group>"; };
 		8679716B1E58A0ED00732D56 /* SeedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeedModel.m; sourceTree = "<group>"; };
+		8679716F1E58E4EF00732D56 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		867971701E58E4EF00732D56 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
+		867971711E58E4EF00732D56 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		867971721E58E4EF00732D56 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
+		867971731E58E4EF00732D56 /* NSDateFormatter+Locale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+Locale.h"; sourceTree = "<group>"; };
+		867971741E58E4EF00732D56 /* NSDateFormatter+Locale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+Locale.m"; sourceTree = "<group>"; };
 		867F1CB21E4D86B90054B562 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		8686D37B1E55909D0094FBEA /* MuseoSans-100.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoSans-100.otf"; sourceTree = "<group>"; };
 		8686D37C1E55909D0094FBEA /* MuseoSans-300.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoSans-300.otf"; sourceTree = "<group>"; };
@@ -243,6 +252,12 @@
 				86348B251E575580005A2760 /* CustomColoredViewController.m */,
 				8618FC281E4B4694009E59C9 /* ViewController.h */,
 				8618FC291E4B4694009E59C9 /* ViewController.m */,
+				8679716F1E58E4EF00732D56 /* NSString+HTML.h */,
+				867971701E58E4EF00732D56 /* NSString+HTML.m */,
+				867971711E58E4EF00732D56 /* GTMNSString+HTML.h */,
+				867971721E58E4EF00732D56 /* GTMNSString+HTML.m */,
+				867971731E58E4EF00732D56 /* NSDateFormatter+Locale.h */,
+				867971741E58E4EF00732D56 /* NSDateFormatter+Locale.m */,
 				8679716E1E58A0F500732D56 /* SeedClass */,
 				867971671E589F6B00732D56 /* UserInfo */,
 				867971651E589F2300732D56 /* DBmanager */,
@@ -670,17 +685,20 @@
 				86348B321E575AE3005A2760 /* DBManager.m in Sources */,
 				86348B441E575B5B005A2760 /* MessagesViewController.m in Sources */,
 				8679716C1E58A0ED00732D56 /* SeedSync.m in Sources */,
+				867971751E58E4EF00732D56 /* NSString+HTML.m in Sources */,
 				86348B461E575B5B005A2760 /* NewsCategoryFetcher.m in Sources */,
 				86348B451E575B5B005A2760 /* MessageDetailViewController.m in Sources */,
 				8618FC2A1E4B4694009E59C9 /* ViewController.m in Sources */,
 				86348B261E575580005A2760 /* CustomColoredViewController.m in Sources */,
 				86348B2C1E575AC3005A2760 /* Postman.m in Sources */,
+				867971761E58E4EF00732D56 /* GTMNSString+HTML.m in Sources */,
 				86348B491E575B5B005A2760 /* NewsContentModel.m in Sources */,
 				8618FC271E4B4694009E59C9 /* AppDelegate.m in Sources */,
 				86348B2F1E575AD4005A2760 /* UserInfo.m in Sources */,
 				8679716D1E58A0ED00732D56 /* SeedModel.m in Sources */,
 				86348B471E575B5B005A2760 /* BadgeNoManager.m in Sources */,
 				86348B481E575B5B005A2760 /* NewsCategoryModel.m in Sources */,
+				867971771E58E4EF00732D56 /* NSDateFormatter+Locale.m in Sources */,
 				86348B4C1E575F89005A2760 /* Constant.m in Sources */,
 				8618FC241E4B4694009E59C9 /* main.m in Sources */,
 			);
