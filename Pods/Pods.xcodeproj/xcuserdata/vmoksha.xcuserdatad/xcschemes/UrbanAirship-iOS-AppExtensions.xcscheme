@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '8C7B02FF82292298ECBF5D74'
+               BlueprintIdentifier = '680D3BA5F1FB54CDED102047'
                BlueprintName = 'UrbanAirship-iOS-AppExtensions'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libUrbanAirship-iOS-AppExtensions.a'>

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'A2D42F261625A5D6066CA4BC'
+               BlueprintIdentifier = '5A0C0678846CD4D21E802D6D'
                BlueprintName = 'Pods-MessagePushExtension'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-MessagePushExtension.a'>

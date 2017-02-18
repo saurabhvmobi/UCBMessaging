@@ -6,8 +6,10 @@
 source “https://github.com/CocoaPods/Old-Specs”
 
 target 'UCBMessage' do
-  pod 'UrbanAirship-iOS-SDK'
-
+pod 'UrbanAirship-iOS-SDK'
+pod "AFNetworking", "~> 2.0"
+pod 'MBProgressHUD', '~> 0.8'
+pod 'MCLocalization', '~> 1.1'
 end
 
 target ‘MessagePushExtension’ do

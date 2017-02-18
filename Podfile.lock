@@ -1,12 +1,41 @@
 PODS:
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - MBProgressHUD (0.9.2)
+  - MCLocalization (1.1.6)
   - UrbanAirship-iOS-AppExtensions (8.0.4)
   - UrbanAirship-iOS-SDK (8.0.4)
 
 DEPENDENCIES:
+  - AFNetworking (~> 2.0)
+  - MBProgressHUD (~> 0.8)
+  - MCLocalization (~> 1.1)
   - UrbanAirship-iOS-AppExtensions
   - UrbanAirship-iOS-SDK
 
 SPEC CHECKSUMS:
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MCLocalization: 9e4f3c5f6a7aa079e7ac5c89893f76b582bbf30a
   UrbanAirship-iOS-AppExtensions: be55bfb40f2fae5a08ad95bb934a2c770f027f04
   UrbanAirship-iOS-SDK: cf625099f5934d91a8f21c69259c4e0b537b6cbd
 

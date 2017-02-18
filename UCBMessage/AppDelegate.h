@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NewsCategoryFetcher.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
 @property(nonatomic,strong)NSMutableArray *messageArr;
+@property (strong, nonatomic) NewsCategoryFetcher *fetcher;
 
 @end
 
