@@ -122,27 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../../Project/Vmoksha_project/Mobility/SimplicITy/Trunk/Souce/SimplicITy/MessageDetailViewController.m"
-            timestampString = "509141616.915264"
+            timestampString = "509143771.185712"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../../../Project/Vmoksha_project/Mobility/SimplicITy/Trunk/Souce/SimplicITy/MessageDetailViewController.m"
-            timestampString = "509141835.398864"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "224"
-            endingLineNumber = "224"
+            startingLineNumber = "209"
+            endingLineNumber = "209"
             landmarkName = "-heightOfSubjectCell"
             landmarkType = "7">
          </BreakpointContent>
@@ -154,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../../Project/Vmoksha_project/Mobility/SimplicITy/Trunk/Souce/SimplicITy/MessageDetailViewController.m"
-            timestampString = "509141838.995002"
+            timestampString = "509143771.185712"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "201"
-            endingLineNumber = "201"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
             landmarkName = "-tableView:numberOfRowsInSection:"
             landmarkType = "7">
          </BreakpointContent>
@@ -170,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../../Project/Vmoksha_project/Mobility/SimplicITy/Trunk/Souce/SimplicITy/MessageDetailViewController.m"
-            timestampString = "509141841.081826"
+            timestampString = "509143771.185712"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "205"
-            endingLineNumber = "205"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
             landmarkName = "-tableView:heightForRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -186,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../../Project/Vmoksha_project/Mobility/SimplicITy/Trunk/Souce/SimplicITy/MessageDetailViewController.m"
-            timestampString = "509141857.15348"
+            timestampString = "509143771.185712"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "-setViewFlagOnDB"
             landmarkType = "7">
          </BreakpointContent>
@@ -202,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../../Project/Vmoksha_project/Mobility/SimplicITy/Trunk/Souce/SimplicITy/MessageDetailViewController.m"
-            timestampString = "509142101.648086"
+            timestampString = "509143771.185712"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
